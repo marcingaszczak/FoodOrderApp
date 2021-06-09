@@ -1,0 +1,26 @@
+$backgroundColor: rgb(53, 53, 53);
+$textColor: white;
+
+.Info {
+  background-color: $backgroundColor;
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  top: -15vh;
+  text-align: center;
+  border-radius: 20px;
+  color: $textColor;
+}
+
+.Info_H1 {
+  margin: 0;
+}
+
+.Info_P {
+  margin: 0;
+  margin-top: 1vh;
+}

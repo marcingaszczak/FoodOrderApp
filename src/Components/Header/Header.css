@@ -1,0 +1,46 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #8a2b06;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8vh;
+  max-height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  z-index: 10;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.main_image {
+  width: 100vw;
+  height: 35vh;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: -18vw;
+}
+
+.main_image img {
+  width: 110%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+          transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+}
+/*# sourceMappingURL=Header.css.map */

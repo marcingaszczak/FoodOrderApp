@@ -1,0 +1,37 @@
+.Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  float: right;
+  top: -75px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Form_button {
+  margin: 1vh;
+  width: 35%;
+  height: 4vh;
+  position: relative;
+  left: 62%;
+  border: none;
+  border-radius: 20px;
+  background-color: #4d1601;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+}
+
+.Form_button:hover {
+  background-color: #2c0d00;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Form.css.map */

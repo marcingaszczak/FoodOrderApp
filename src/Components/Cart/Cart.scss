@@ -1,0 +1,33 @@
+$numberBGColor: #8a2b06;
+$buttonBGColor: #4d1601;
+$buttonHoverColor: #2c0d00;
+$fontColor: white;
+
+.cart {
+  box-sizing: border-box;
+  display: flex;
+  background-color: $buttonBGColor;
+  margin: 0 10vw;
+  padding: 1vh 2.5vw;
+  position: relative;
+  right: 10vw;
+  font-size: 14px;
+  height: 40px;
+  width: 220px;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  cursor: pointer;
+  color: $fontColor;
+  &:hover {
+    background-color: $buttonHoverColor;
+  }
+
+  .number {
+    background-color: $numberBGColor;
+    padding: 0.5vw 1vw;
+    margin-left: 0.5vw;
+    border-radius: 10px;
+  }
+}

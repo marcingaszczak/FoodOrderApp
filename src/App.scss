@@ -1,0 +1,14 @@
+$backgroundColor: rgb(39, 39, 39);
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: $backgroundColor;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  width: 65vw;
+}

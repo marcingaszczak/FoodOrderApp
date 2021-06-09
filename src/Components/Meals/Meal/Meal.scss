@@ -1,0 +1,25 @@
+$numberBGColor: #8a2b06;
+
+.Meal {
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid gray;
+  max-height: 100px;
+}
+
+.Name {
+  margin: 0;
+  padding: 0;
+}
+
+.Desc {
+  margin: 0;
+  padding: 6px 0;
+  font-style: italic;
+}
+
+.Price {
+  margin: 0;
+  padding: 0;
+  color: $numberBGColor;
+}

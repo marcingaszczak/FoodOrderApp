@@ -1,0 +1,30 @@
+$buttonBGColor: #4d1601;
+$buttonHoverColor: #2c0d00;
+$textColor: #fff;
+
+.Form {
+  display: flex;
+  position: relative;
+  float: right;
+  top: -75px;
+  flex-direction: column;
+}
+
+.Form_button {
+  margin: 1vh;
+  width: 35%;
+  height: 4vh;
+  position: relative;
+  left: 62%;
+  border: none;
+  border-radius: 20px;
+  background-color: $buttonBGColor;
+  color: $textColor;
+  align-items: center;
+  flex-direction: center;
+
+  &:hover {
+    background-color: $buttonHoverColor;
+    cursor: pointer;
+  }
+}

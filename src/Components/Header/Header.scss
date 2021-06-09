@@ -1,0 +1,38 @@
+$headerBGColor: #8a2b06;
+$fontColor: white;
+
+.header {
+  display: flex;
+  background-color: $headerBGColor;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8vh;
+  max-height: 10vh;
+  align-items: center;
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: space-between;
+  color: $fontColor;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.main_image {
+  width: 100vw;
+  height: 35vh;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: -18vw;
+  img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+  }
+}
