@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useContext, useRef } from 'react';
 import './Form.css';
 import Input from './Input/Input'
 
-function Form() {
+
+function Form(props) {
+
+
+    const amountInputRef = useRef();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const inputVal = amountInputRef.current.value;
+        const inputValNumber = +inputVal;
+        props.submitHandler(inputValNumber);
+    }
+
     return (
-        <div className='Form'>
-            <Input />
-            <button className='Form_button'>+Add</button>
-        </div>
+        <form className='Form'>
+            <Input
+            ref={amountInputRef}/>
+            <button className='Form_button' onClick={handleSubmit}>+Add</button>
+        </form>
     )
 }
 
