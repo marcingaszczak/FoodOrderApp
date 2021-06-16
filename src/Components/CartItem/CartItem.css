@@ -1,0 +1,71 @@
+.CartItem_Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #4d1601;
+  max-height: 7vh;
+  padding-top: 10px;
+}
+
+.CartItem_Name {
+  font-size: 26px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.CartItem_Amount {
+  border: 1px solid #8a2b06;
+  width: 10%;
+  height: 2.5vh;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  left: 20%;
+  top: -2.6vh;
+  font-weight: bold;
+}
+
+.CartItem_Minus {
+  position: relative;
+  position: absolute;
+  margin-top: 3%;
+  left: 75%;
+  border: 1px solid #8a2b06;
+  width: 7%;
+  height: 6%;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+  color: #8a2b06;
+}
+
+.CartItem_Minus:hover {
+  background-color: #8a2b06;
+  color: white;
+}
+
+.CartItem_Plus {
+  position: absolute;
+  margin-top: 3%;
+  left: 85%;
+  border: 1px solid #8a2b06;
+  width: 7%;
+  height: 6%;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+  color: #8a2b06;
+}
+
+.CartItem_Plus:hover {
+  background-color: #8a2b06;
+  color: white;
+}
+/*# sourceMappingURL=CartItem.css.map */

@@ -11,6 +11,13 @@
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 101;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  border-radius: 12px;
+  padding-top: 10px;
 }
 
 .CartModal_backdrop {
@@ -21,5 +28,77 @@
   z-index: 100;
   top: 0;
   left: 0;
+}
+
+.Modal_Price_Button_Container {
+  margin-top: 15px;
+}
+
+.CartModal_Price_Label {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.CartModal_Price {
+  width: 95%;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  top: -3vh;
+  text-align: right;
+}
+
+.CartModal_Close {
+  margin: 1vh;
+  width: 25%;
+  height: 4vh;
+  position: relative;
+  left: 40%;
+  border-radius: 20px;
+  background-color: white;
+  color: #8a2b06;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  border: 1px solid #8a2b06;
+  cursor: pointer;
+}
+
+.CartModal_Close:hover {
+  background-color: #8a2b06;
+  color: white;
+}
+
+.CartModal_Order {
+  margin: 1vh;
+  width: 25%;
+  height: 4vh;
+  position: relative;
+  left: 40%;
+  border: none;
+  border-radius: 20px;
+  background-color: #8a2b06;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  cursor: pointer;
+}
+
+.CartModal_Order:hover {
+  background-color: #4d1601;
 }
 /*# sourceMappingURL=CartModal.css.map */

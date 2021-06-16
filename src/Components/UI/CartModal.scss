@@ -1,4 +1,7 @@
 $BGColor: white;
+$buttonBGColorHover: #4d1601;
+$buttonBGColor: #8a2b06;
+$textColor: white;
 
 .CartModal {
   background-color: white;
@@ -9,6 +12,10 @@ $BGColor: white;
   width: 40%;
   justify-content: center;
   z-index: 101;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 12px;
+  padding-top: 10px;
 }
 
 .CartModal_backdrop {
@@ -19,4 +26,62 @@ $BGColor: white;
   z-index: 100;
   top: 0;
   left: 0;
+}
+
+.Modal_Price_Button_Container {
+  margin-top: 15px;
+}
+
+.CartModal_Price_Label {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.CartModal_Price {
+  width: 95%;
+  font-size: 20px;
+  font-weight: bold;
+  box-sizing: border-box;
+  position: relative;
+  top: -3vh;
+  text-align: right;
+}
+
+.CartModal_Close {
+  margin: 1vh;
+  width: 25%;
+  height: 4vh;
+  position: relative;
+  left: 40%;
+  border-radius: 20px;
+  background-color: $textColor;
+  color: $buttonBGColor;
+  align-items: center;
+  flex-direction: center;
+  border: 1px solid $buttonBGColor;
+  cursor: pointer;
+  &:hover {
+    background-color: $buttonBGColor;
+    color: $textColor;
+  }
+}
+
+.CartModal_Order {
+  margin: 1vh;
+  width: 25%;
+  height: 4vh;
+  position: relative;
+  left: 40%;
+  border: none;
+  border-radius: 20px;
+  background-color: $buttonBGColor;
+  color: $textColor;
+  align-items: center;
+  flex-direction: center;
+  cursor: pointer;
+  &:hover {
+    background-color: $buttonBGColorHover;
+  }
 }

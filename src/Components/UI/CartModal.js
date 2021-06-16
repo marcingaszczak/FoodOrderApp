@@ -15,14 +15,21 @@ function CartModal() {
     }
 
     const Modal = () => {
-        const mappedCartItem = orderCtx.items.map((item) => {
+        const mappedCartItem = orderCtx.items.map((item) => (
             <CartItem
-                name = {item.name}/>
-        })
+                name = {item.name}
+                price = {item.price}
+                amount = {item.amount}/>
+        ))
         return (
             <div className='CartModal'>
-                <p>dummy content</p>
                 {mappedCartItem}
+                <div className='Modal_Price_Button_Container'>
+                    <div className='CartModal_Price_Label'>Total Price:</div>
+                    <div className='CartModal_Price'>203</div>
+                    <button className='CartModal_Close'>Close</button>
+                    <button className='CartModal_Order'>Order</button>
+                </div>
             </div>
         )
     }

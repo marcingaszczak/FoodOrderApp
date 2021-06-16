@@ -1,0 +1,67 @@
+$borderColor: #4d1601;
+$priceBorderColor: #8a2b06;
+$textColor: white;
+
+.CartItem_Container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $borderColor;
+  max-height: 7vh;
+  padding-top: 10px;
+}
+
+.CartItem_Name {
+  font-size: 26px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.CartItem_Amount {
+  border: 1px solid $priceBorderColor;
+  width: 10%;
+  height: 2.5vh;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  left: 20%;
+  top: -2.6vh;
+  font-weight: bold;
+}
+
+.CartItem_Minus {
+  position: relative;
+  position: absolute;
+  margin-top: 3%;
+  left: 75%;
+  border: 1px solid $priceBorderColor;
+  width: 7%;
+  height: 6%;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+  color: $priceBorderColor;
+  &:hover {
+    background-color: $priceBorderColor;
+    color: $textColor;
+  }
+}
+
+.CartItem_Plus {
+  position: absolute;
+  margin-top: 3%;
+  left: 85%;
+  border: 1px solid $priceBorderColor;
+  width: 7%;
+  height: 6%;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+  color: $priceBorderColor;
+  &:hover {
+    background-color: $priceBorderColor;
+    color: $textColor;
+  }
+}

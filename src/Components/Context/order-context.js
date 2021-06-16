@@ -33,7 +33,7 @@ export const OrderContextProvider = (props) => {
 
     const handleAddItemToCart = (item) => {
         switch(item.name) {
-            case 'Sushi':
+            case 'ADD':
                 dispatchOrder({type: 'ADD', item: item})
             break;
         }
