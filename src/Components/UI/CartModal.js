@@ -6,10 +6,10 @@ import OrderContext from '../Context/order-context';
 import CartItem from '../CartItem/CartItem';
 
 function CartModal() {
-
     const cartctx = useContext(CartContext)
     const orderCtx = useContext(OrderContext)
-    console.log(orderCtx.items.length)
+    const hasItems = orderCtx.items.length > 0;
+    console.log(orderCtx.total_price)
     const Backdrop = () => {
         return  <div className='CartModal_backdrop' onClick={cartctx.handleBackdropCilck}></div>
     }
@@ -19,16 +19,25 @@ function CartModal() {
             <CartItem
                 name = {item.name}
                 price = {item.price}
-                amount = {item.amount}/>
+                amount = {item.amount}
+                handleAdd = {item.handleAddItemToCart()}/>
         ))
         return (
             <div className='CartModal'>
                 {mappedCartItem}
                 <div className='Modal_Price_Button_Container'>
                     <div className='CartModal_Price_Label'>Total Price:</div>
-                    <div className='CartModal_Price'>203</div>
-                    <button className='CartModal_Close'>Close</button>
-                    <button className='CartModal_Order'>Order</button>
+                    <div className='CartModal_Price'>{Math.round(orderCtx.total_price*100)/100}$</div>
+                    <button
+                        className='CartModal_Close'
+                        onClick={cartctx.handleBackdropCilck}>
+                            Close
+                    </button>
+                    {hasItems && <button
+                        className='CartModal_Order'
+                        onClick={() => {console.log('Zamówiono!')}}>
+                            Order
+                    </button>}
                 </div>
             </div>
         )

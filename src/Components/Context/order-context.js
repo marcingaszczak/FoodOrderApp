@@ -2,22 +2,42 @@ import React, { useReducer } from 'react';
 
 const OrderContext = React.createContext({
     items: [],
+    total_price: 0,
     total_amount: 0,
-    handleAddItemToCart: () => {}
+    handleAddItemToCart: () => {},
+    handleRemoveItemFromCart: () => {}
 }
 )
 
 
 const orderReducer =  (state, action) => {
     if(action.type === 'ADD') {
+        const newTotalPrice = state.total_price += action.item.amount * +action.item.price;
+        const newTotalAmount = state.total_amount += action.item.amount;
+        let newItems = [];
+        let newItem = {};
+        const itemID = state.items.findIndex(item => {
+            return item.id === action.item.id
+        })
+        const firstItem = state.items[itemID]
 
-        const newItem = state.items.concat(action.item);
-        const newTotalAmount = state.total_amount += action.item.amount
-        console.log(newItem)
-        return {
-            items: newItem,
-            total_amount:newTotalAmount
+        if(firstItem) {
+            newItem = {...firstItem,
+            amount: firstItem.amount + action.item.amount}
+            newItems = [...state.items];
+            newItems[itemID] = newItem
+        } else {
+            newItems = state.items.concat(action.item);
         }
+        console.log(newItems)
+        return {
+            items: newItems,
+            total_amount:newTotalAmount,
+            total_price: newTotalPrice
+        }
+    }
+    if(action.type === 'REMOVE') {
+
     }
 }
 
@@ -27,25 +47,28 @@ export const OrderContextProvider = (props) => {
 
     const [order, dispatchOrder] = useReducer(orderReducer, {
         items: [],
+        total_price: 0,
         total_amount: 0,
-        handleAddItemToCart: () => {}
+        handleAddItemToCart: () => {},
+        handleRemoveItemFromCart: () => {}
     })
 
     const handleAddItemToCart = (item) => {
-        switch(item.name) {
-            case 'ADD':
-                dispatchOrder({type: 'ADD', item: item})
-            break;
-        }
+        dispatchOrder({type: 'ADD', item: item})
+    }
 
+    const handleRemoveItemFromCart = (id) => {
+        dispatchOrder({type: 'REMOVE', id: id})
     }
 
     return (
         <OrderContext.Provider
             value = {{
                 items: order.items,
+                total_price: order.total_price,
                 total_amount: order.total_amount,
-                handleAddItemToCart: handleAddItemToCart
+                handleAddItemToCart: handleAddItemToCart,
+                handleRemoveItemFromCart: handleRemoveItemFromCart
             }}>
             {props.children}
         </OrderContext.Provider>

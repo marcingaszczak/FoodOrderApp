@@ -7,7 +7,7 @@ $textColor: white;
   background-color: white;
   display: flex;
   position: fixed;
-  top: 30vh;
+  top: 25vh;
   left: 30%;
   width: 40%;
   justify-content: center;
@@ -16,6 +16,8 @@ $textColor: white;
   padding: 10px;
   border-radius: 12px;
   padding-top: 10px;
+  max-height: 55vh;
+  overflow-y: scroll;
 }
 
 .CartModal_backdrop {
