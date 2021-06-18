@@ -37,6 +37,30 @@ const orderReducer =  (state, action) => {
         }
     }
     if(action.type === 'REMOVE') {
+        const itemID = state.items.findIndex(item => {
+            return action.id === item.id
+        })
+        const clickedItem = state.items[itemID];
+        const updatedTotalPrice = state.total_price - clickedItem.price;
+        const newTotalAmount = state.total_amount - 1;
+        if(clickedItem.amount === 1) {
+            const newItems = state.items.filter(item => { return item.id !== action.id });
+            return ({
+                total_price: updatedTotalPrice,
+                items: newItems,
+                total_amount: newTotalAmount
+            })
+        }else {
+            const newItem = {...clickedItem, amount: clickedItem.amount -1}
+            console.log(newItem)
+            const newItems = [...state.items]
+            newItems[itemID] = newItem;
+            return {
+                total_price: updatedTotalPrice,
+                items: newItems,
+                total_amount: newTotalAmount
+            }
+        }
 
     }
 }

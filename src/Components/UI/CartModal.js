@@ -14,13 +14,22 @@ function CartModal() {
         return  <div className='CartModal_backdrop' onClick={cartctx.handleBackdropCilck}></div>
     }
 
+    const handlePlusClick = (item) => {
+        orderCtx.handleAddItemToCart({...item, amount: 1})
+    }
+
+    const handleMinusClick = (id) => {
+        orderCtx.handleRemoveItemFromCart(id)
+    }
+
     const Modal = () => {
         const mappedCartItem = orderCtx.items.map((item) => (
             <CartItem
                 name = {item.name}
                 price = {item.price}
                 amount = {item.amount}
-                handleAdd = {item.handleAddItemToCart()}/>
+                handleAdd = {handlePlusClick.bind(null, item)}
+                handleMinus = {handleMinusClick.bind(null, item.id)}/>
         ))
         return (
             <div className='CartModal'>
