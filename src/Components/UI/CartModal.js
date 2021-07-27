@@ -28,8 +28,10 @@ function CartModal() {
                 name = {item.name}
                 price = {item.price}
                 amount = {item.amount}
-                handleAdd = {handlePlusClick.bind(null, item)}
-                handleMinus = {handleMinusClick.bind(null, item.id)}/>
+                // handleAdd = {handlePlusClick.bind(null, item)}
+                // handleMinus = {handleMinusClick.bind(null, item.id)}
+                handleAdd={() => {handlePlusClick(item)}}
+                handleMinus = {() => {handleMinusClick(item.id)}}/>
         ))
         return (
             <div className='CartModal'>

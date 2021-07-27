@@ -12,7 +12,7 @@ const OrderContext = React.createContext({
 
 const orderReducer =  (state, action) => {
     if(action.type === 'ADD') {
-        const newTotalPrice = state.total_price += action.item.amount * +action.item.price;
+        const newTotalPrice = state.total_price += action.item.amount * + action.item.price;
         const newTotalAmount = state.total_amount += action.item.amount;
         let newItems = [];
         let newItem = {};

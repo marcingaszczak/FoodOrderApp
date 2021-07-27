@@ -28,3 +28,12 @@ $textColor: #fff;
     cursor: pointer;
   }
 }
+
+@media all and (max-width: 600px) {
+  .Form {
+    font-size: 1rem;
+  }
+  .Form_button {
+    font-size: 0.7rem;
+  }
+}

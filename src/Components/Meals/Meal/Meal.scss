@@ -23,3 +23,17 @@ $numberBGColor: #8a2b06;
   padding: 0;
   color: $numberBGColor;
 }
+
+@media all and (max-width: 600px) {
+  .Name {
+    font-size: 1rem;
+  }
+  .Desc {
+    font-size: 0.6rem;
+  }
+
+  .Price {
+    font-size: 1rem;
+    padding-bottom: 10px;
+  }
+}

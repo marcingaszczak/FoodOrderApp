@@ -6,15 +6,16 @@ import OrderContext from './../../Context/order-context';
 function Meal(props) {
 
     const orderctx = useContext(OrderContext);
-        const submitHandler = (data) => {
-            orderctx.handleAddItemToCart({
-                amount: data,
-                key: props.id,
-                id: props.id,
-                name: props.name,
-                price: props.price
-            })
-        }
+
+    const submitHandler = (data) => {
+        orderctx.handleAddItemToCart({
+            amount: data,
+            key: props.id,
+            id: props.id,
+            name: props.name,
+            price: props.price
+        })
+    }
 
     return (
         <div className='Meal'>
